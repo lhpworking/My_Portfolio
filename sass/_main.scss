@@ -1,0 +1,13 @@
+.main{
+    &-container{
+        padding-top: 40px;
+    }
+    &-myself{
+        position: relative;
+        text-align: center;
+        text-transform: capitalize;
+        margin: 0 auto;
+        font-size: 90px;
+        font-weight: 400;
+    }
+}

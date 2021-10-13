@@ -1,0 +1,29 @@
+.wrapper {
+    min-width: 1440px;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.container-fluid{
+    min-width:1440px;
+    margin: 0 auto;
+}
+.text-small{
+    font-size: 16px;
+    font-weight: 300;
+}
+.text-medium{
+    font-size: 18px;
+    font-weight: 500;
+}
+/* Keyframes Animation */
+@keyframes scrolling {
+    0% {
+        top: 17%;
+    }
+    100% {
+        top: 30%;
+    }
+  }
