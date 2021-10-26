@@ -1,13 +1,19 @@
-.main{
-    &-container{
-        padding-top: 40px;
+.main {
+  &-container {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-myself {
+    position: relative;
+    text-transform: capitalize;
+    margin: 0 auto;
+  }
+  &-img {
+    img {
+      filter: drop-shadow(16px 16px 20px #007f80);
     }
-    &-myself{
-        position: relative;
-        text-align: center;
-        text-transform: capitalize;
-        margin: 0 auto;
-        font-size: 90px;
-        font-weight: 400;
-    }
+  }
 }
+

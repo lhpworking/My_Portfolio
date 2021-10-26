@@ -41,18 +41,22 @@ setInterval(() => {
 
 // controller about myself
 const container = document.querySelector(".main-container");
-const myself = document.querySelector(".main-myself p");
+const myself = document.querySelectorAll(".main-myself h1");
+const mainImg = document.querySelector(".main-img img");
+
+
+var timeLine = new TimelineMax();
+    timeLine.fromTo(myself, 1,{x:-500,y:0,opacity:0}, {x:0,duration:5,opacity:1,type:"soft",ease: "power1.out"})
+    timeLine.fromTo(mainImg, 1,{x:0,y:-450,opacity:0.8 }, {x:0,y:0,duration:5,type:"soft",opacity:1,ease:"back.out(1.5))"});
 
 const myselfController = new ScrollMagic.Controller();
-
-let textMyselfAnimated = new TweenMax.fromTo(myself, 6,{x:-1000,y:100,opacity:0}, {x:0,duration:1,opacity:1,ease:"power1"})
 var sceneMyself = new ScrollMagic.Scene({
     duration: 5000, // the scene should last for a scroll distance of
     triggerElement: container,
     triggerHook: 0,
 })
     .setPin(container)
-    .setTween(textMyselfAnimated)
+    .setTween(timeLine)
     .addTo(myselfController);
 
 //menu-ham
