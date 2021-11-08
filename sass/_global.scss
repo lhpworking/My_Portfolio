@@ -1,63 +1,126 @@
-// font-family
-$font-family: "Nunito", sans-serif;
-// color
-$color-primary: #e8b717;
+@use "./variables"as *;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+html {
+  font-size       : 62.5%; // fs-10px
+  background-color: $bg-color-primary;
+  scroll-behavior : smooth;
+}
+
+// font-size
+.fs-1 {
+  font-size: 3.5rem;
+}
+
+.fs-2 {
+  font-size: 3rem;
+}
+
+.fs-3 {
+  font-size: 2.5rem;
+}
+
+.fs-4 {
+  font-size: 2rem;
+}
+
+.fs-5 {
+  font-size: 1.5rem;
+}
+
+.fs-6 {
+  font-size: 1rem;
+}
+
+// padding
+.p-1 {
+  padding: 2.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: .5rem;
+}
 
 body {
   font-family: $font-family;
-  font-size: 17px;
-  font-weight: 600;
-  background-color:#262626;
-  color: #fff;
-}
-
-.wrapper {
-  min-width: 1440px;
-  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1.5;
+  color      : $text-color;
+  overflow-x : hidden;
 }
 
 .container {
   max-width: 1140px;
-  margin: 0 auto;
+  margin   : 0 auto;
 }
 
 .container-fluid {
-  min-width: 1440px;
-  margin: 0 auto;
+  max-width: 1440px;
+  margin   : 0 auto;
 }
+
 .text-name {
   font-weight: 700;
-  font-size: 80px;
+  font-size  : 7rem;
 }
+
 .name-color {
-  color: $color-primary;
   text-decoration: underline wavy #cdc;
 }
-.text-sm {
-  font-size: 16px;
-  font-weight: 400;
-}
+
 .text-lg {
-  font-size: 40px;
+  font-size  : 3rem;
   font-weight: 400;
 }
-.rounded-sm{
-  border-radius: 5px;
+
+.rounded-sm {
+  border-radius: 0.3rem;
 }
-.rounded-circle{
+
+.rounded-circle {
   border-radius: 100%;
 }
-.rounded-lg{
-  border-radius: 15px;
+
+.rounded-lg {
+  border-radius: 1rem;
 }
 
-/* Keyframes Animation */
-@keyframes scrolling {
-  0% {
-    top: 17%;
-  }
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
 
-  100% {
-    top: 30%;
-  }
+.btn {
+  display      : inline-flex;
+  align-items  : center;
+  padding      : 1.8rem 3.2rem;
+  font-size    : 1.8rem;
+  border-radius: 5px;
+  cursor       : pointer;
+  outline      : none;
+  border       : none;
+
+}
+
+.btn-outline {
+  background-color: transparent;
+  border          : 1px solid currentColor;
+}
+
+.btn-outline:hover {
+  background-color: $text-color;
+  color           : $bg-color-primary;
+  box-shadow      : 0 0 10px rgba($color: #333, $alpha: .2);
+  transition      : all .2s linear;
 }

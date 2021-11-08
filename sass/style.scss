@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-@import "reset";
-@import "global";
-@import "header";
-@import "main";
+@import "./global";
+@import "./reset";
+@import "./variables";
+@import "./component/header";
+@import "./component/main";

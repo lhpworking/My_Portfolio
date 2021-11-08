@@ -1,0 +1,105 @@
+.main {
+
+  /* section myself*/
+  &__myself {
+    background-color: rgba($bg-color-primary, $alpha: 1);
+    position        : relative;
+  }
+
+  &__myself-container {
+    display    : flex;
+    align-items: center;
+    padding    : 15rem 0 20rem 0;
+    margin-top : auto;
+  }
+
+  &__myself-intro {
+    position    : relative;
+    max-width   : 60rem;
+    width       : 100%;
+    margin-right: 5rem;
+  }
+
+  &__myself-img {
+    position: relative;
+    width   : 100%;
+    height  : 100%;
+
+    img {
+      aspect-ratio: 1/1;
+      object-fit  : contain;
+    }
+  }
+
+  /* section project*/
+  &__project {
+    padding-bottom: 5rem;
+    position      : relative;
+  }
+
+  &__project-title {
+    text-align    : center;
+    padding-bottom: 5rem;
+    position      : relative;
+    text-transform: capitalize;
+    font-size     : 5rem;
+    margin        : 0 auto;
+
+  }
+
+  &__project-content {
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 2rem 2rem;
+  }
+
+  &__project-card {
+    display         : flex;
+    flex-direction  : column;
+    border-radius   : .5rem;
+    background-color: #fff;
+    overflow        : hidden;
+    border          : none;
+
+    &--header {
+      img {
+        aspect-ratio: 16/9;
+        width       : 100%;
+        object-fit  : cover;
+      }
+    }
+
+    &:hover {
+      transform : translateY(-1rem);
+      box-shadow: 0 0 16px rgba($color: #333, $alpha: .2);
+      transition: all .2s ease;
+    }
+  }
+
+
+  &__project-tag {
+    display      : inline-block;
+    padding      : 0 16px;
+    position     : relative;
+    font-weight  : 700;
+    border-radius: .2rem;
+    filter       : brightness(90%);
+  }
+
+}
+
+.tag-js {
+  position        : relative;
+  background-color: rgba($color: $color-js, $alpha: .2);
+  color           : $color-js;
+}
+
+.tag-scss {
+  color           : $color-scss;
+  background-color: rgba($color: $color-scss, $alpha: .2);
+}
+
+.tag-html {
+  color           : $color-html;
+  background-color: rgba($color: $color-html, $alpha: .2);
+}
