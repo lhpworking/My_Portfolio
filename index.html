@@ -8,13 +8,17 @@
     <link rel="icon" href="assets/img/LHP-icon.svg" />
     <title>Welcome,LHP</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- box icon -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <!-- overlay -->
     <div class="overlay">
-        <img src="./assets/img/RECOVERY.png" alt="loading">
+        <div class="overlay-loading">
+            <img src="./assets/img/RECOVERY.png" alt="loading">
+        </div>
+
     </div>
 
     <!-- header -->
@@ -28,23 +32,22 @@
             </div>
         </div>
     </header>
-
     <div class="header__menu-block">
-        <ul class="menu">
-            <li class="menu-item">
-                <a href="#" class="menu-link">Resource</a>
-            </li>
-            <li class="menu-item">
-                <a href="#" class="menu-link">asdsad</a>
-            </li>
-            <li class="menu-item">
-                <a href="#" class="menu-link">Blog</a>
-            </li>
-            <li class="menu-item">
-                <a href="#" class="menu-link">dsdasd</a>
-            </li>
-        </ul>
-
+        <div class="container-fluid">
+            <div class="header__menu-container">
+                <ul class="header__menu">
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Resource</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">Resumé</a>
+                    </li>
+                </ul>
+                <div class="header__menu-close" id="menu-close">
+                    <a type="button">Close</a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- main -->
     <main class="main">
@@ -58,14 +61,26 @@
                             Call me <em class="name-color ">Phat Ly</em>.
                         </h1>
                         <h1 class="text-lg">
-                            I'm a front-end developer, I love animation about website
+                            I'm a front-end developer, let's build some creative website together
                             <span style="color: red">&hearts;</span>.
                         </h1>
-                        <a href="mailto:lhpworking@gmail.com">
-                            <button class="btn btn-outline ">Contact me <i class='bx bx-mail-send'></i> </button>
-                        </a>
+                        <div class="contact-block">
+                            <a href="mailto:lhpworking@gmail.com">
+                                <button class="btn btn-outline ">Contact me <i class='bx bx-mail-send'></i> </button>
+                            </a>
+                            <ul class="social__block">
+                                <li class="social__block-item">
+                                    <a class="social__block-link" href="https://github.com/lhpworking"
+                                        target="_blank"><i class='bx bxl-github'></i></a>
+                                </li>
+                                <li class="social__block-item">
+                                    <a class="social__block-link" href="https://www.facebook.com/hung.phat.1441"
+                                        target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="main__myself-img skewElem">
+                    <div class="main__myself-img">
                         <img src="./assets/img/BIPOLAR.png" alt="image-ghost" />
                     </div>
                 </div>
@@ -97,13 +112,13 @@
                     </div>
                     <div class="main__project-card">
                         <div class="main__project-card--header">
-                            <a href="https://lhpworking.github.io/faq-accordion-card-main/" target="_blank">
+                            <a href="https://lhpworking.github.io/Tip-calculator-app/" target="_blank">
                                 <img src="./assets/img/tip-cal-desktop-design-empty.jpg" alt="">
                             </a>
                         </div>
                         <div class="main__project-card--body p-3">
                             <div class="main__project-name">
-                                <h1 class="fs-1">Fag Accordion Card</h1>
+                                <h1 class="fs-1">Tip calculator app</h1>
                             </div>
                             <div class="main__project-type">
                                 <span class="main__project-tag tag-html fs-5">HTML</span>
@@ -114,13 +129,45 @@
                     </div>
                     <div class="main__project-card">
                         <div class="main__project-card--header">
-                            <a href="https://lhpworking.github.io/faq-accordion-card-main/" target="_blank">
+                            <a href="https://lhpworking.github.io/order-summary-component-main/" target="_blank">
                                 <img src="./assets/img/sumary-desktop-design.jpg" alt="">
                             </a>
                         </div>
                         <div class="main__project-card--body p-3">
                             <div class="main__project-name">
-                                <h1 class="fs-1">Fag Accordion Card</h1>
+                                <h1 class="fs-1">Order summary card</h1>
+                            </div>
+                            <div class="main__project-type">
+                                <span class="main__project-tag tag-html fs-5">HTML</span>
+                                <span class="main__project-tag tag-scss fs-5">SCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__project-card">
+                        <div class="main__project-card--header">
+                            <a href="https://lhpworking.github.io/Food-delivery/" target="_blank">
+                                <img src="./assets/img/fooddie.png" alt="">
+                            </a>
+                        </div>
+                        <div class="main__project-card--body p-3">
+                            <div class="main__project-name">
+                                <h1 class="fs-1">Food-delivery</h1>
+                            </div>
+                            <div class="main__project-type">
+                                <span class="main__project-tag tag-html fs-5">HTML</span>
+                                <span class="main__project-tag tag-scss fs-5">SCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__project-card">
+                        <div class="main__project-card--header">
+                            <a href="https://lhpworking.github.io/E-commerce-product-page/" target="_blank">
+                                <img src="./assets/img/sneaker-desktop-design.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="main__project-card--body p-3">
+                            <div class="main__project-name">
+                                <h1 class="fs-1">E-commerce product page</h1>
                             </div>
                             <div class="main__project-type">
                                 <span class="main__project-tag tag-html fs-5">HTML</span>
@@ -131,13 +178,13 @@
                     </div>
                     <div class="main__project-card">
                         <div class="main__project-card--header">
-                            <a href="https://lhpworking.github.io/faq-accordion-card-main/" target="_blank">
-                                <img src="./assets/img/sumary-desktop-design.jpg" alt="">
+                            <a href="https://lhpworking.github.io/shobee/" target="_blank">
+                                <img src="./assets/img/shobee.png" alt="">
                             </a>
                         </div>
                         <div class="main__project-card--body p-3">
                             <div class="main__project-name">
-                                <h1 class="fs-1">Fag Accordion Card</h1>
+                                <h1 class="fs-1">Shobee (Clone Shopee)</h1>
                             </div>
                             <div class="main__project-type">
                                 <span class="main__project-tag tag-html fs-5">HTML</span>
@@ -148,34 +195,70 @@
                     </div>
                     <div class="main__project-card">
                         <div class="main__project-card--header">
-                            <a href="https://lhpworking.github.io/faq-accordion-card-main/" target="_blank">
-                                <img src="./assets/img/sumary-desktop-design.jpg" alt="">
+                            <a href="https://lhpworking.github.io/footbook-social/" target="_blank">
+                                <img src="./assets/img/footbook.png" alt="">
                             </a>
                         </div>
                         <div class="main__project-card--body p-3">
                             <div class="main__project-name">
-                                <h1 class="fs-1">Fag Accordion Card</h1>
+                                <h1 class="fs-1">Footbook (Clone facebook)</h1>
                             </div>
                             <div class="main__project-type">
                                 <span class="main__project-tag tag-html fs-5">HTML</span>
                                 <span class="main__project-tag tag-scss fs-5">SCSS</span>
+                                <span class="main__project-tag tag-js fs-5">JS</span>
+                                <span class="main__project-tag tag-bootstrap fs-5">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__project-card">
+                        <div class="main__project-card--header">
+                            <a href="https://lhpworking.github.io/Aptech_Template/" target="_blank">
+                                <img src="./assets/img/aptech.png" alt="">
+                            </a>
+                        </div>
+                        <div class="main__project-card--body p-3">
+                            <div class="main__project-name">
+                                <h1 class="fs-1">Admin Template</h1>
+                            </div>
+                            <div class="main__project-type">
+                                <span class="main__project-tag tag-html fs-5">HTML</span>
+                                <span class="main__project-tag tag-css fs-5">CSS</span>
+                                <span class="main__project-tag tag-js fs-5">JS</span>
+                                <span class="main__project-tag tag-bootstrap fs-5">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__project-card">
+                        <div class="main__project-card--header">
+                            <a href="https://lhpworking.github.io/Programming-Quote-Generator/" target="_blank">
+                                <img src="./assets/img/Quotes-generate.png" alt="">
+                            </a>
+                        </div>
+                        <div class="main__project-card--body p-3">
+                            <div class="main__project-name">
+                                <h1 class="fs-1">Quote Generator</h1>
+                            </div>
+                            <div class="main__project-type">
+                                <span class="main__project-tag tag-html fs-5">HTML</span>
+                                <span class="main__project-tag tag-css fs-5">CSS</span>
                                 <span class="main__project-tag tag-js fs-5">JS</span>
                             </div>
                         </div>
                     </div>
                     <div class="main__project-card">
                         <div class="main__project-card--header">
-                            <a href="https://lhpworking.github.io/faq-accordion-card-main/" target="_blank">
-                                <img src="./assets/img/sumary-desktop-design.jpg" alt="">
+                            <a href="https://lhpworking.github.io/Music-player/" target="_blank">
+                                <img src="./assets/img/music_player.png" alt="">
                             </a>
                         </div>
                         <div class="main__project-card--body p-3">
                             <div class="main__project-name">
-                                <h1 class="fs-1">Fag Accordion Card</h1>
+                                <h1 class="fs-1">Music Player</h1>
                             </div>
                             <div class="main__project-type">
                                 <span class="main__project-tag tag-html fs-5">HTML</span>
-                                <span class="main__project-tag tag-scss fs-5">SCSS</span>
+                                <span class="main__project-tag tag-css fs-5">CSS</span>
                                 <span class="main__project-tag tag-js fs-5">JS</span>
                             </div>
                         </div>
@@ -185,7 +268,14 @@
         </section>
     </main>
     <!-- footer -->
-    <footer></footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="copywrite">
+                <p>Created With &hearts; by <span><a href="https://github.com/lhpworking" target="_blank"><img
+                                src="./assets/img/LHP-logo.svg" width="35" alt=""></a></span>© 2021</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- sass ./sass/style.scss ./assets/css/style.css --watch -->
 
@@ -193,12 +283,13 @@
     <script type="module" src="./assets/js/app.js"></script>
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- box icon -->
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <!-- gSap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
     <!-- animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 </body>
 
 </html>

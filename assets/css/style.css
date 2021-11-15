@@ -161,6 +161,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 /* ---------------------About Header-----------------------*/
 .header {
   position: fixed;
@@ -171,7 +175,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 2rem;
 }
 .header__logo {
   width: 100%;
@@ -182,24 +186,8 @@ img {
   height: 5px;
   display: block;
   background: linear-gradient(90deg, #c84444 0%, #ff9600 0%, #ffd300 100%);
-  z-index: 2000;
-}
-.header__menu-ham.active {
-  transform: rotate(45deg);
-  transition: ease 0.5s;
-  border-radius: 5px;
-}
-.header__menu-ham.active::before {
-  transform: rotate(90deg);
-  width: 30px;
-  border-radius: 5px;
-  transition: ease 0.5s;
-  margin: 0 auto;
-}
-.header__menu-ham.active::after {
-  margin: 0 auto;
-  opacity: 0;
-  transition: ease 0.5s;
+  z-index: 99;
+  cursor: pointer;
 }
 .header__menu-ham::before {
   content: "";
@@ -219,18 +207,38 @@ img {
 }
 .header__menu-block {
   position: fixed;
-  background-color: #fff;
-  width: 10rem;
+  width: 0%;
   height: 100%;
   z-index: 1999;
   right: 0;
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-out;
   visibility: hidden;
+  background: #fff url("./../img/ANXIETY.png") center;
+  background-size: contain;
+  background-size: 0%;
+  background-repeat: no-repeat;
+  padding-top: 2rem;
 }
 .header__menu-block.active {
   visibility: visible;
   width: 100%;
-  transition: all 800ms ease-in-out;
+  background-size: 50%;
+  transition: background-size 1000ms ease-in;
+  transition: width 800ms ease-in;
+}
+.header__menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu-close {
+  font-size: 1.7rem;
+  text-decoration: underline;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+.header__menu-close:hover {
+  opacity: 0.8;
 }
 
 /* overlay*/
@@ -242,14 +250,39 @@ img {
   background-color: #eaedef;
 }
 .overlay img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: 15rem;
-  aspect-ratio: 16/9;
+}
+.overlay-loading {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+.overlay-loading::after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background: #000;
+  border-radius: 50%;
+  animation: pulse 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+  z-index: -1;
 }
 
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .main {
   /* section myself*/
   /* section project*/
@@ -261,7 +294,7 @@ img {
 .main__myself-container {
   display: flex;
   align-items: center;
-  padding: 15rem 0 20rem 0;
+  padding: 15rem 0 25rem 0;
   margin-top: auto;
 }
 .main__myself-intro {
@@ -278,6 +311,16 @@ img {
 .main__myself-img img {
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+.main .contact-block {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0 3rem;
+  font-size: 3rem;
+}
+.main .contact-block a {
+  color: #000;
 }
 .main__project {
   padding-bottom: 5rem;
@@ -303,6 +346,7 @@ img {
   background-color: #fff;
   overflow: hidden;
   border: none;
+  box-shadow: 0 0 16px rgba(51, 51, 51, 0.2);
 }
 .main__project-card--header img {
   aspect-ratio: 16/9;
@@ -311,7 +355,7 @@ img {
 }
 .main__project-card:hover {
   transform: translateY(-1rem);
-  box-shadow: 0 0 16px rgba(51, 51, 51, 0.2);
+  box-shadow: 0 0 16px rgba(51, 51, 51, 0.4);
   transition: all 0.2s ease;
 }
 .main__project-tag {
@@ -337,6 +381,42 @@ img {
 .tag-html {
   color: #e34c25;
   background-color: rgba(227, 76, 37, 0.2);
+}
+
+.tag-css {
+  color: #563d7c;
+  background-color: rgba(86, 61, 124, 0.2);
+}
+
+.tag-bootstrap {
+  color: #7325f6;
+  background-color: rgba(115, 37, 246, 0.2);
+}
+
+.social__block {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+}
+.social__block-item {
+  transition: all 0.2s linear;
+}
+.social__block-item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s linear;
+}
+
+.copywrite {
+  padding: 5rem 0;
+}
+.copywrite p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+}
+.copywrite p img {
+  margin: 0 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

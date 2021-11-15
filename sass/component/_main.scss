@@ -9,7 +9,7 @@
   &__myself-container {
     display    : flex;
     align-items: center;
-    padding    : 15rem 0 20rem 0;
+    padding    : 15rem 0 25rem 0;
     margin-top : auto;
   }
 
@@ -28,6 +28,18 @@
     img {
       aspect-ratio: 1/1;
       object-fit  : contain;
+    }
+  }
+
+  .contact-block {
+    padding-top: 1rem;
+    display    : flex;
+    align-items: center;
+    gap        : 0 3rem;
+    font-size  : 3rem;
+
+    a {
+      color: $text-color;
     }
   }
 
@@ -60,6 +72,7 @@
     background-color: #fff;
     overflow        : hidden;
     border          : none;
+    box-shadow      : 0 0 16px rgba($color: #333, $alpha: .2);
 
     &--header {
       img {
@@ -71,7 +84,7 @@
 
     &:hover {
       transform : translateY(-1rem);
-      box-shadow: 0 0 16px rgba($color: #333, $alpha: .2);
+      box-shadow: 0 0 16px rgba($color: #333, $alpha: .4);
       transition: all .2s ease;
     }
   }
@@ -102,4 +115,45 @@
 .tag-html {
   color           : $color-html;
   background-color: rgba($color: $color-html, $alpha: .2);
+}
+
+.tag-css {
+  color           : $color-css;
+  background-color: rgba($color-css, $alpha: .2);
+}
+
+.tag-bootstrap {
+  color           : $color-bootstrap;
+  background-color: rgba($color: $color-bootstrap, $alpha: .2);
+}
+
+.social__block {
+  display    : flex;
+  align-items: center;
+  gap        : 0 15px;
+
+  &-item {
+    transition: all .2s linear;
+
+    &:hover {
+      transform : translateY(-5px);
+      transition: transform .2s linear;
+    }
+  }
+}
+
+// footer
+.copywrite {
+  padding: 5rem 0;
+
+  p {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-size      : 17px;
+
+    img {
+      margin: 0 .5rem;
+    }
+  }
 }
