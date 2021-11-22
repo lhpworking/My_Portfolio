@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/img/LHP-icon.svg" />
-    <title>Welcome,LHP</title>
+    <title>Phat Ly - Front-End Dev</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- box icon -->
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -28,7 +28,9 @@
                 <a href="My_Portfolio/index.html">
                     <img class="header__logo" src="assets/img/LHP-logo.svg " alt="logo" />
                 </a>
-                <div class="header__menu-ham"></div>
+                <div class="header__menu-info" id="menu-info">
+                    <a type="button">Info</a>
+                </div>
             </div>
         </div>
     </header>
@@ -37,14 +39,31 @@
             <div class="header__menu-container">
                 <ul class="header__menu">
                     <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Resource</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Resumé</a>
+                        <a href="./assets/cv/LyHungPhat-CV.pdf" class="header__menu-link btn btn-primary"
+                            download="LyHungPhat-CV">Resumé</a>
                     </li>
                 </ul>
                 <div class="header__menu-close" id="menu-close">
                     <a type="button">Close</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="header__menu-content">
+                    <div class="text-intro">
+                        <p>you got an <em class="name-color ">idea</em>? let's build everything for the website
+                            together.</p>
+                    </div>
+                    <div class="text-personal">
+                        <p>Hello, I'm Phat Ly. <br> Nice to work with you.</p>
+                    </div>
+                    <img src="./assets/img/phat.png" alt="">
+                    <div class="contact-info">
+                        <i class='bx bx-right-arrow-alt'></i>
+                        <div class="contact-details">
+                            <a href="mailto:lhpworking@gmail.com" class="text-lg">lhpworking@gmail.com </a>
+                            <p class="text-lg">+84 0932791657</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,7 +74,7 @@
         <section class="main__myself ">
             <div class="container">
                 <div class="main__myself-container">
-                    <div class="main__myself-intro skewElem">
+                    <div class="main__myself-intro ">
                         <h1 class="text-lg">Hi! There 👋🏼</h1>
                         <h1 class="text-name">
                             Call me <em class="name-color ">Phat Ly</em>.
@@ -263,6 +282,40 @@
                             </div>
                         </div>
                     </div>
+                    <div class="main__project-card">
+                        <div class="main__project-card--header">
+                            <a href="https://lhpworking.github.io/sunnyside-agency-landing-page-main/" target="_blank">
+                                <img src="./assets/img/sunnyside-design.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="main__project-card--body p-3">
+                            <div class="main__project-name">
+                                <h1 class="fs-1">SunnySide agency landing page</h1>
+                            </div>
+                            <div class="main__project-type">
+                                <span class="main__project-tag tag-html fs-5">HTML</span>
+                                <span class="main__project-tag tag-scss fs-5">SCSS</span>
+                                <span class="main__project-tag tag-js fs-5">JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__project-card">
+                        <div class="main__project-card--header">
+                            <a href="https://lhpworking.github.io/room-homepage-master/" target="_blank">
+                                <img src="./assets/img/room-homepage.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="main__project-card--body p-3">
+                            <div class="main__project-name">
+                                <h1 class="fs-1">Room home page</h1>
+                            </div>
+                            <div class="main__project-type">
+                                <span class="main__project-tag tag-html fs-5">HTML</span>
+                                <span class="main__project-tag tag-css fs-5">CSS</span>
+                                <span class="main__project-tag tag-js fs-5">JS</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -270,9 +323,16 @@
     <!-- footer -->
     <footer class="footer">
         <div class="container">
-            <div class="copywrite">
-                <p>Created With &hearts; by <span><a href="https://github.com/lhpworking" target="_blank"><img
-                                src="./assets/img/LHP-logo.svg" width="35" alt=""></a></span>© 2021</p>
+            <div class="contact-working">
+                <div class="contact-working-details">
+                    <h1>Contact For Working</h1>
+                    <a href="mailto:lhpworking@gmail.com">lhpworking@gmail.com</a>
+                    <p>+84 0932791657</p>
+                </div>
+                <div class="copywrite">
+                    <p>Created With &hearts; by <span><a href="https://github.com/lhpworking" target="_blank"><img
+                                    src="./assets/img/LHP-logo.svg" width="35" alt=""></a></span>© 2021</p>
+                </div>
             </div>
         </div>
     </footer>

@@ -73,7 +73,7 @@ body {
 
 .text-name {
   font-weight: 700;
-  font-size  : 7rem;
+  font-size  : 5rem;
 }
 
 .name-color {
@@ -116,6 +116,7 @@ body {
 .btn-outline {
   background-color: transparent;
   border          : 1px solid currentColor;
+  transition      : all .2s linear;
 }
 
 .btn-outline:hover {
@@ -123,4 +124,17 @@ body {
   color           : $bg-color-primary;
   box-shadow      : 0 0 10px rgba($color: #333, $alpha: .2);
   transition      : all .2s linear;
+}
+
+.btn-primary {
+  background-color: $color-black;
+  color           : $color-white;
+  transition      : all .2s linear;
+}
+
+.btn-primary:hover {
+  // opacity   : .8;
+  box-shadow: 0 10px 10px rgba($color: #333, $alpha: .4);
+  transform : translateY(-0.5rem);
+  transition: all .2s linear;
 }

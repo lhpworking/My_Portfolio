@@ -8,7 +8,7 @@
     display        : flex;
     justify-content: space-between;
     align-items    : center;
-    padding        : 2rem;
+    padding        : 2rem 2rem;
 
   }
 
@@ -17,62 +17,102 @@
     height: 5vh;
   }
 
-  &__menu-ham {
-    width  : 30px;
-    height : 5px;
-    display: block;
-    background: linear-gradient(90deg,
-        rgba(200, 68, 68, 1) 0%,
-        rgba(255, 150, 0, 1) 0%,
-        rgba(255, 211, 0, 1) 100%);
-    z-index: 99;
-    cursor : pointer;
+  &__menu-info {
+    font-size       : 1.7rem;
+    text-decoration : underline;
+    letter-spacing  : .2px;
+    cursor          : pointer;
+    text-decoration : none;
+    background-color: transparent;
+    border          : 1px solid $color-black;
+    padding         : 15px;
+    border-radius   : 50%;
+    transition      : all .2s linear;
 
-    &::before {
-      content: "";
-      display: block;
-      width  : 15px;
-      height : 5px;
-      background: linear-gradient(90deg,
-          rgba(200, 68, 68, 1) 0%,
-          rgba(255, 150, 0, 1) 0%,
-          rgba(255, 211, 0, 1) 100%);
-      margin-top: -10px;
-    }
-
-    &::after {
-      content: "";
-      float  : right;
-      width  : 15px;
-      height : 5px;
-      background: linear-gradient(90deg,
-          rgba(200, 68, 68, 1) 0%,
-          rgba(255, 150, 0, 1) 0%,
-          rgba(255, 211, 0, 1) 100%);
-      margin-top: 15px;
+    &:hover {
+      background-color: $color-black;
+      color           : $color-white;
+      transition      : all .2s ease;
     }
   }
 
+  // &__menu-ham {
+  //   width  : 30px;
+  //   height : 5px;
+  //   display: block;
+  //   background: linear-gradient(90deg,
+  //       rgba(200, 68, 68, 1) 0%,
+  //       rgba(255, 150, 0, 1) 0%,
+  //       rgba(255, 211, 0, 1) 100%);
+  //   z-index: 99;
+  //   cursor : pointer;
+
+  //   &::before {
+  //     content: "";
+  //     display: block;
+  //     width  : 15px;
+  //     height : 5px;
+  //     background: linear-gradient(90deg,
+  //         rgba(200, 68, 68, 1) 0%,
+  //         rgba(255, 150, 0, 1) 0%,
+  //         rgba(255, 211, 0, 1) 100%);
+  //     margin-top: -10px;
+  //   }
+
+  //   &::after {
+  //     content: "";
+  //     float  : right;
+  //     width  : 15px;
+  //     height : 5px;
+  //     background: linear-gradient(90deg,
+  //         rgba(200, 68, 68, 1) 0%,
+  //         rgba(255, 150, 0, 1) 0%,
+  //         rgba(255, 211, 0, 1) 100%);
+  //     margin-top: 15px;
+  //   }
+  // }
+
   &__menu-block {
-    position         : fixed;
-    width            : 0%;
-    height           : 100%;
-    z-index          : 1999;
-    right            : 0;
-    transition       : all 300ms ease-out;
-    visibility       : hidden;
-    background       : #fff url("./../img/ANXIETY.png") center;
-    background-size  : contain;
-    background-size  : 0%;
-    background-repeat: no-repeat;
-    padding-top      : 2rem;
+    position        : fixed;
+    width           : 100%;
+    top             : -100%;
+    height          : 100%;
+    z-index         : 9999;
+    right           : 0;
+    transition      : all 500ms linear;
+    background-color: $color-white;
+    padding-top     : 2rem;
 
     &.active {
-      visibility     : visible;
-      width          : 100%;
-      background-size: 50%;
-      transition     : background-size 1000ms ease-in;
-      transition     : width 800ms ease-in;
+      top       : 0;
+      transition: all 500ms linear;
+
+      .text-intro {
+        opacity   : 1;
+        top       : 0%;
+        transition: all .5s linear .5s;
+      }
+
+      .text-personal {
+        opacity   : 1;
+        right     : 0;
+        transition: all .5s linear .7s;
+
+      }
+
+      .header__menu-content {
+        img {
+          visibility: visible;
+        }
+      }
+
+      .contact-info {
+        top       : 100%;
+        bottom    : 0;
+        opacity   : 1;
+        transition: all .5s linear 1s;
+
+      }
     }
   }
 
@@ -80,6 +120,7 @@
     display        : flex;
     justify-content: space-between;
     align-items    : center;
+    padding        : 0 40px;
 
   }
 
@@ -93,11 +134,96 @@
       opacity: .8;
     }
   }
+
+  &__menu-content {
+    position                      : relative;
+    display                       : grid;
+    // grid-template-columns: repeat(3, 1fr);
+    place-items                   : center;
+    height                        : 80vh;
+    // padding-top             : 100px;
+    // overflow                   : hidden;
+
+    img {
+      width         : 500px;
+      mix-blend-mode: multiply;
+      filter        : grayscale(1);
+      object-fit    : contain;
+      transition    : all .2s ease;
+      margin        : 50px 50px 100px 50px;
+      visibility    : hidden;
+
+
+
+      &:hover {
+        filter        : grayscale(0);
+        mix-blend-mode: unset;
+        transform     : scale(1.2);
+        transition    : all .2s ease;
+
+      }
+    }
+
+    .text-intro {
+      position  : absolute;
+      text-align: center;
+      top       : -100%;
+      transition: all .2s linear;
+      opacity   : 0;
+
+      p {
+        font-size     : 8rem;
+        text-transform: capitalize;
+      }
+    }
+
+    .text-personal {
+      position  : absolute;
+      top       : 50%;
+      right     : -100%;
+      opacity   : 0;
+      transition: all .2s linear;
+
+      p {
+        font-size: 3rem;
+      }
+    }
+
+    .contact-info {
+      position   : absolute;
+      top        : -100%;
+      opacity    : 0;
+      left       : 0;
+      display    : flex;
+      transition : all .2s linear;
+      align-items: center;
+
+      i.bx.bx-right-arrow-alt {
+        font-size   : 5rem;
+        margin-right: 1rem;
+      }
+
+    }
+
+    .contact-details {
+      a {
+        color          : $text-color;
+        text-decoration: underline;
+        cursor         : pointer;
+        ;
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+  }
 }
+
 /* overlay*/
 .overlay {
   position        : fixed;
-  height          : 100%;
+  height          : 100vh;
   width           : 100%;
   z-index         : 99999;
   background-color: $bg-color-primary;
@@ -112,8 +238,10 @@
     position   : relative;
     display    : grid;
     place-items: center;
-    height     : 100%;
+    height     : 100vh;
     width      : 100%;
+    padding    : 0;
+    margin     : 0;
 
     &::after {
       content      : '';
@@ -142,5 +270,43 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-intro {
+    p {
+      font-size: 6rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-intro {
+    p {
+      font-size: 4rem !important;
+    }
+  }
+
+  .header {
+    &__menu-content {
+      height    : 50vh;
+      margin-top: 80px;
+
+      img {
+        width         : 300px;
+        margin        : 0;
+        visibility    : hidden;
+        pointer-events: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .text-intro {
+      p {
+        font-size: 3rem !important;
+      }
+    }
   }
 }

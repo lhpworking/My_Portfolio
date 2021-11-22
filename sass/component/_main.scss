@@ -9,8 +9,7 @@
   &__myself-container {
     display    : flex;
     align-items: center;
-    padding    : 15rem 0 25rem 0;
-    margin-top : auto;
+    padding    : 15rem 4rem 25rem 4rem;
   }
 
   &__myself-intro {
@@ -143,6 +142,11 @@
 }
 
 // footer
+.footer {
+  background-color: $color-white;
+  margin-top      : 70px;
+}
+
 .copywrite {
   padding: 5rem 0;
 
@@ -156,4 +160,151 @@
       margin: 0 .5rem;
     }
   }
+}
+
+.contact-working {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  flex-direction : column;
+
+  &-details {
+    padding-top: 50px;
+    text-align : center;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    a {
+      font-size : 8rem;
+      color     : $color-black;
+      cursor    : pointer;
+      transition: all .2s linear;
+
+      &:hover {
+        opacity   : .5;
+        transition: all .2s linear;
+      }
+    }
+
+    p {
+      font-size: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    &__myself-container {
+      flex-direction: column;
+    }
+
+    &__myself-intro {
+      margin-right : 0;
+      margin-bottom: 5rem;
+    }
+
+    &__project-content {
+      display              : grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap                  : 2rem 2rem;
+    }
+  }
+
+  .contact-working {
+    &-details {
+      a {
+        font-size: 7rem;
+      }
+
+    }
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    &__myself-container {
+      padding: 15rem 4rem 10rem 4rem;
+    }
+
+    &__myself-intro {
+      margin-right : 0;
+      margin-bottom: 3rem;
+    }
+
+    &__project-content {
+      grid-template-columns: repeat(1, 1fr);
+      gap                  : 2rem 2rem;
+    }
+  }
+
+  .text-name {
+    font-size: 4rem;
+  }
+
+  .text-lg {
+    font-size: 2rem;
+  }
+
+  .contact-working {
+    &-details {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      a {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  .text-name {
+    font-size: 3.5rem;
+  }
+
+  .btn {
+
+    padding: 2rem 1rem;
+
+  }
+
+  .contact-working {
+    &-details {
+      h1 {
+        font-size: 2rem;
+      }
+
+      a {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text-name {
+    font-size: 3rem;
+  }
+
+  .main {
+
+    &__project-title {
+      font-size: 4rem;
+
+    }
+  }
+
 }
